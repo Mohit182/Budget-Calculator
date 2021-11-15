@@ -15,6 +15,7 @@ const App = () => {
   const [expenses, setExpenses] = useState(initialExpenses);
   const [charge, setCharge] = useState("");
   const [amount, setAmount] = useState("");
+
   const [alert, setAlert] = useState({ show: false });
 
   const chargeHandler = (event) => {
@@ -46,6 +47,16 @@ const App = () => {
     }
   };
 
+  const clearItemHandler = () => {
+    setExpenses([]);
+  };
+  const deleteItemHandler = (id) => {
+    console.log(`item deleted : ${id}`);
+  };
+  const editItemHandler = (id) => {
+    console.log(`item edited : ${id}`);
+  };
+
   return (
     <>
       {alert.show && <Alert type={alert.type} text={alert.text} />}
@@ -59,7 +70,12 @@ const App = () => {
           chargeHandler={chargeHandler}
           submitHandler={submitHandler}
         />
-        <ExpenseList expenses={expenses} />
+        <ExpenseList
+          expenses={expenses}
+          deleteItemHandler={deleteItemHandler}
+          editItemHandler={editItemHandler}
+          clearItemHandler={clearItemHandler}
+        />
       </main>
       <h1>
         total spending:{" "}
