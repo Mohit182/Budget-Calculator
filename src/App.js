@@ -49,10 +49,15 @@ const App = () => {
 
   const clearItemHandler = () => {
     setExpenses([]);
+    alertHandler({ type: "danger", text: "all items deleted" });
   };
+
   const deleteItemHandler = (id) => {
-    console.log(`item deleted : ${id}`);
+    let tempExpenses = expenses.filter((item) => item.id !== id);
+    setExpenses(tempExpenses);
+    alertHandler({ type: "danger", text: "item deleted" });
   };
+
   const editItemHandler = (id) => {
     console.log(`item edited : ${id}`);
   };
