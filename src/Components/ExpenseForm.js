@@ -31,7 +31,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <button type="submit" className="btn">
-        submit
+        {props.edit ? "edit" : "submit"}
         <MdSend className="btn-icon" />
       </button>
     </form>
