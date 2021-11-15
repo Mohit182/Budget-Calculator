@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 :root {
   --primaryColor: #f15025;
-  --mainWhite: rgb(202, 187, 187);
+  --mainWhite: white;
   --mainBlack: #222;
   --mainGrey: #312e2e;
   --mainRed: #d50000;
