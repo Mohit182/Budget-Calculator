@@ -19,7 +19,7 @@ const App = () => {
   const [expenses, setExpenses] = useState(initialExpenses);
   const [charge, setCharge] = useState("");
   const [amount, setAmount] = useState("");
-  const [alert, setAlert] = useState({ show: false });
+  const [alert, setAlert] = useState({ show: false, type: null, text: "" });
   const [edit, setEdit] = useState(false);
   const [id, setId] = useState(0);
 

@@ -6,7 +6,7 @@ const ExpenseForm = (props) => {
     <form onSubmit={props.submitHandler}>
       <div className="form-center">
         <div className="form-group">
-          <label htmlFor="charge">Charge</label>
+          <label htmlFor="charge">Expense</label>
           <input
             type="text"
             className="form-control"
